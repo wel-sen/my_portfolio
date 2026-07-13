@@ -4,7 +4,7 @@ Welcome to my personal portfolio website! This project showcases my work, experi
 
 ## 🌐 Live Demo
 
-🔗 https://yonathanagena.netlify.app/
+🔗 https://yonydesigns.netlify.app/
 
 ---
 
@@ -58,12 +58,11 @@ My approach combines user-centered design, strategic thinking, and business goal
 ```
 portfolio/
 │
-├── assets/
-│   ├── css/
-│   ├── js/
-│   ├── images/
-│   └── icons/
-│
+├
+│── css/
+│── js/
+│── img/
+│ 
 ├── index.html
 ├── README.md
 └── favicon.ico
@@ -75,11 +74,11 @@ portfolio/
 
 I'm always open to discussing new opportunities, freelance projects, or collaborations.
 
-**Email:** your.email@gmail.com
+**Email:** yonathananjulo@gmail.com
 
 **LinkedIn:** https://www.linkedin.com/in/yonathan-agena-702180b3/
 
-**Portfolio:** https://yonathanagena.netlify.app/
+**Portfolio:** https://yonydesigns.netlify.app/
 
 ---
 
