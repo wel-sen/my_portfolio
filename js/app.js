@@ -1496,6 +1496,90 @@ gsap.to("[data-speed]", {
     scrub: 0
   }
 });
+
+
+/* Image Clipper */
+document.querySelectorAll('.mxd-expand-image').forEach((container) => {
+  const img = container.querySelector('img');
+  const btn = container.querySelector('.mxd-expand-image__btn');
+  const btnText = btn.querySelector('span');
+  const icon = btn.querySelector('.mxd-expand-image__arrow');
+
+  function getCollapsedHeight() {
+    const cssValue = getComputedStyle(container).getPropertyValue('--collapsed-height').trim();
+    const fixedHeight = parseFloat(cssValue) || 400;
+    return Math.min(fixedHeight, img.offsetHeight);
+  }
+
+  function setCollapsedHeight() {
+    if (container.classList.contains('is-expanded')) return;
+
+    const collapsedHeight = getCollapsedHeight();
+    container.style.maxHeight = collapsedHeight + 'px';
+
+    btn.style.display = img.offsetHeight <= collapsedHeight + 1 ? 'none' : '';
+  }
+
+  img.addEventListener('load', setCollapsedHeight);
+  window.addEventListener('resize', () => {
+    container.classList.contains('is-expanded')
+      ? (container.style.maxHeight = img.offsetHeight + 'px')
+      : setCollapsedHeight();
+  });
+
+  btn.addEventListener('click', () => {
+    const expanded = container.classList.toggle('is-expanded');
+
+    if (expanded) {
+      container.style.maxHeight = img.offsetHeight + 'px';
+      btnText.textContent = 'View less';
+      icon.classList.remove('ph-arrow-down-right');
+      icon.classList.add('ph-arrow-up-right');
+    } else {
+      container.style.maxHeight = getCollapsedHeight() + 'px';
+      btnText.textContent = 'View the whole image';
+      icon.classList.remove('ph-arrow-up-right');
+      icon.classList.add('ph-arrow-down-right');
+      container.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+  });
+
+  if (img.complete) setCollapsedHeight();
+});
+
+/* Example */
+const mockup = document.getElementById('phoneMockup');
+const mediaQuery = window.matchMedia('(max-width: 767px)');
+let scrollInterval = null;
+
+function startAutoScroll() {
+  const screen = mockup.querySelector('.mxd-phone-mockup__screen');
+  let scrollingDown = true;
+
+  scrollInterval = setInterval(() => {
+    const maxScroll = screen.scrollHeight - screen.clientHeight;
+    screen.scrollTop += scrollingDown ? 1 : -1;
+    if (screen.scrollTop >= maxScroll) scrollingDown = false;
+    if (screen.scrollTop <= 0) scrollingDown = true;
+  }, 30);
+}
+
+function stopAutoScroll() {
+  clearInterval(scrollInterval);
+  scrollInterval = null;
+}
+
+function handleViewportChange(e) {
+  if (e.matches) {
+    startAutoScroll(); // mobile view — start it
+  } else {
+    stopAutoScroll(); // desktop view — stop it
+  }
+}
+
+mediaQuery.addEventListener('change', handleViewportChange);
+handleViewportChange(mediaQuery); // run once on page load too
+
 // --------------------------------------------- //
 // Parallax Universal End
 // --------------------------------------------- //
