@@ -373,6 +373,11 @@
   --bg-demo-screen-09: var(--bg-demo-screen-09--dark);
 }
 
+.loading__item,
+.loading__fade {
+  opacity: 0;
+}
+
 /* ------------------------------------------------*/
 /* Variables End */
 /* ------------------------------------------------*/
@@ -440,7 +445,7 @@
 }
 
 .preview-image-4 {
-  background-image: url(../img/works/preview/event_1400x1400.webp);
+  background-image: url(../img/works/preview/1400x1400_02.webp);
 }
 
 .preview-image-5 {
@@ -508,7 +513,11 @@
 }
 
 .prj-details-img-02 {
-  background-image: url(../img/works/preview/sabi_2000x1333.webp);
+  background-image: url(../img/works/preview/1400x1400_02.webp);
+}
+
+.prj-details-img-03 {
+  background-image: url(../img/works/admas/1400x1400_admas02.webp);
 }
 
 /* ------------------------------------------------*/
@@ -5212,7 +5221,7 @@ form textarea:required:valid {
   -moz-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  gap: 2.8rem;
+  gap: 4rem;
   margin-bottom: 2.8rem;
 }
 
@@ -23313,15 +23322,13 @@ form textarea:required:valid {
 }
 
 .example h2 {
-  font-size: 18px;
-  color: #333;
+  font-size: 32px;
   margin-bottom: 12px;
   font-weight: 600;
 }
 
 .example p {
-  font-size: 14px;
-  color: #666;
+  font-size: 16px;
   margin-bottom: 16px;
   line-height: 1.5;
 }
@@ -23455,7 +23462,7 @@ form textarea:required:valid {
 /* SABI Title, Description and Images Section*/
 
 .mxd-media-block {
-  max-width: 1000px;
+  max-width: 1100px;
   width: 100%;
   margin: 48px auto;
   padding: 0 1.5rem;
@@ -23514,7 +23521,7 @@ form textarea:required:valid {
   }
 }
 
-/* Clipping Container */
+/* SABI Clipping Container */
 
 .mxd-expand-image {
   --collapsed-height: 400px; /* default collapsed height */
@@ -23609,7 +23616,7 @@ form textarea:required:valid {
   }
 }
 
-/* Scrollable Iphone 17 Mockup */
+/* SABI Scrollable Iphone 17 Mockup */
 
 .mxd-phone-mockup-section {
   text-align: center;
@@ -23694,7 +23701,7 @@ form textarea:required:valid {
   }
 }
 
-/* Bullet text after phone mockups */
+/* SABI Bullet text after phone mockups */
 .mxd-phone-mockup-section__list {
   list-style: none;
   text-align: left;
@@ -23765,7 +23772,9 @@ form textarea:required:valid {
 }
 
 
-
+.mxd-block.absolute-centered-block {
+  pointer-events: none;
+}
 
 /* ------------------------------------------------*/
 /* Features - Project Details End */

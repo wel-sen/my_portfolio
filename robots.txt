@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Disallow: /coming_soon.html
+Disallow: /blog-article.html
+Disallow: /blog-standard.html
+
+Sitemap: https://yonydesigns.netlify.app/sitemap.xml

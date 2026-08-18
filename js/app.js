@@ -57,13 +57,15 @@ gsap.registerPlugin(Flip);
 // --------------------------------------------- //
 const content = document.querySelector('body');
 const imgLoad = imagesLoaded(content);
+const loaderEl = document.getElementById('loader'); // null on home page
 const loadingWrap = document.querySelector('.loading-wrap');
 const loadingItems = loadingWrap.querySelectorAll('.loading__item');
 const fadeInItems = document.querySelectorAll('.loading__fade');
 
 function startLoader() {
   let counterElement = document.querySelector(".loader__count .count__text");
-  let currentValue = 0;
+  if (!counterElement) return;
+   currentValue = 0;
   function updateCounter() {
     if (currentValue < 100) {
       let increment = Math.floor(Math.random() * 10) + 1;
@@ -75,19 +77,23 @@ function startLoader() {
   }
   updateCounter();
 }
+if (loaderEl){
 startLoader();
+}
 
 imgLoad.on('done', instance => {
+  if (loaderEl){
   hideLoader();
+  }
   pageAppearance();
 });
 
 function hideLoader() {
-  gsap.to(".loader__count", { duration: 0.8, ease: 'power2.in', y: "100%", delay: 1.8 });
-  gsap.to(".loader__wrapper", { duration: 0.8, ease: 'power4.in', y: "-100%", delay: 2.2 });
+  gsap.to(".loader__count", { duration: 0.6, ease: 'power2.in', y: "100%", delay: 0.6 });
+  gsap.to(".loader__wrapper", { duration: 0.6, ease: 'power4.in', y: "-100%", delay: 1.0 });
   setTimeout(() => {
     document.getElementById("loader").classList.add("loaded");
-  }, 3200);
+  }, 1600);
 }
 
 function pageAppearance() {
@@ -98,11 +104,11 @@ function pageAppearance() {
     startAt: {y: 120},
     y: 0,
     opacity: 1,
-    delay: 0.8,
+    delay: 0.3,
     stagger: 0.08
   }, '>-=1.1');
   gsap.set(fadeInItems, { opacity: 0 });
-  gsap.to(fadeInItems, { duration: 0.8, ease: 'none', opacity: 1, delay: 3.2 });
+  gsap.to(fadeInItems, { duration: 0.8, ease: 'none', opacity: 1, delay: 1.6 });
 }
 // --------------------------------------------- //
 // Loader & Loading Animation End
