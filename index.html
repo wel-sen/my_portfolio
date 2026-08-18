@@ -7,6 +7,27 @@
   <!-- Page Title -->
   <title>Yonathan Agena - Product Designer Portfolio</title>
 
+    <!-- 🟢 Preload both icon fonts so Google stops flagging them -->    
+    <link rel="preload" href="fonts/phosphor.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/swiper-icons.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+  <!--Structured data (schema.org)-->  
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Yonathan Agena",
+  "jobTitle": "Product Designer",
+  "url": "https://yonydesigns.netlify.app",
+  "jobTitle": "Product Designer / Senior UI/UX Designer",
+  "description": "Portfolio of a Product Designer",
+  "sameAs": [
+    "https://www.linkedin.com/in/yonathan-agena-702180b3/",
+    "https://dribbble.com/yonathan_agena"
+  ]
+}
+</script>
+
 
   <!-- Meta Tags -->
   <meta name="description" content="Yonathan Agena - Product Designer Portfolio">
@@ -23,13 +44,15 @@
   <link rel="icon" href="img/favicon/favicon_.png" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicon/favicon_.png">
   <link rel="manifest" href="img/favicon/manifest.webmanifest">
+  <link rel="canonical" href="https://yonydesigns.netlify.app/">
   <!-- Template Favicon & Icons End -->
 
   <!-- Facebook Metadata Start -->
   <meta property="og:image:height" content="1200">
   <meta property="og:image:width" content="1200">
   <meta property="og:title" content="Yonathan Agena - Product Designer Portfolio">
-  <meta property="og:url" content="https://yonathanagena.netlify.app">
+  <meta property="og:description" content="Yonathan Agena - Product Designer Portfolio">
+  <meta property="og:url" content="https://yonydesigns.netlify.app">
   <meta property="og:image" content="preview.jpg">
   <!-- Facebook Metadata End -->
 
@@ -122,11 +145,11 @@
                     </div>
                     <ul class="submenu">
                       <li class="submenu__item">
-                        <a href="404.html">Blogs</a>
+                        <a href="coming_soon.html">Blogs</a>
                       </li>
 
                       <li class="submenu__item">
-                        <a href="404.html">Single post</a>
+                        <a href="coming_soon.html">Single post</a>
                       </li>
                     </ul>
                   </li>
@@ -225,7 +248,7 @@
               <!-- title images -->
               <div class="mxd-hero-01__images mxd-floating-img">
                 <div class="hero-01-image image-01 mxd-floating-img__item loading__fade">
-                  <img class="mxd-pulse" src="img/demo/3d_02.webp" alt="Hero Image">
+                  <img class="mxd-pulse" src="img/demo/3d_02.webp" alt="Hero Image" width="800" height="800">
                 </div>
                 <div class="hero-01-image image-02 mxd-floating-img__item loading__fade">
                   <img class="mxd-move" src="img/demo/cat.webp" alt="Hero Image">
@@ -398,7 +421,7 @@
             </div>
             <div class="mxd-hero-01__video-wrap loading__item">
               <video class="mxd-hero-01__video" preload="auto" autoplay muted loop playsinline
-                poster="img//works/preview/pre_540x310.webp">
+                poster="img//works/preview/540x310_placeholder.webp">
                   <source type="video/mp4" src="video/phone_mockups.mp4">
                    <source type="video/webm" src="video/phone_mockups.webm">
                      <source type="video/ogv" src="video/phone_mockups.ogv">
@@ -455,7 +478,7 @@
                     </p>
                     <div class="mxd-manifest__controls anim-uni-in-up">
                       <a class="btn btn-anim btn-default btn-outline slide-right-up anim-uni-in-up" target="_blank"
-                        href="https://drive.google.com/file/d/1mVgDFckNcwUwEpJxcnDiBvW4p2a9MOGE/view?usp=drive_link">
+                        href="https://drive.google.com/file/d/1WTRY5fEkJ1im9lLCwfE1nEh6HJ90H2io/view?usp=drive_link">
                         <span class="btn-caption">Get CV</span>
                         <i class="ph-bold ph-arrow-down-right"></i>
                       </a>
@@ -489,7 +512,7 @@
                       <p class="mxd-counter__descr t-140 t-bright opposite">Happy clients who<br>trust my work</p>
                     </div>
                     <div class="mxd-stats-cards__image mxd-stats-cards-image-1">
-                      <img src="img/services/800x800_card-image.webp" alt="Illustration">
+                      <img src="img/services/800x800_card-image.webp" width="800" height="800" alt="Illustration" loading="lazy">
                     </div>
                   </div>
                 </div>
@@ -499,13 +522,13 @@
                     <div class="mxd-stats-cards__btngroup">
                       <div class="mxd-avatars">
                         <div class="mxd-avatars__item">
-                          <img src="img/avatars/one.png" alt="Avatar">
+                          <img src="img/avatars/one.webp" alt="Avatar">
                         </div>
                         <div class="mxd-avatars__item">
-                          <img src="img/avatars/tweet.jpg" alt="Avatar">
+                          <img src="img/avatars/tweet.webp" alt="Avatar">
                         </div>
                         <div class="mxd-avatars__item">
-                          <img src="img/avatars/tikus.png" alt="Avatar">
+                          <img src="img/avatars/tikus.webp" alt="Avatar">
                         </div>
                       </div>
                     </div>
@@ -514,7 +537,7 @@
                       <p class="mxd-counter__descr t-140 t-bright">Clients come back for<br>a new projects</p>
                     </div>
                     <div class="mxd-stats-cards__image mxd-stats-cards-image-2">
-                      <img src="img/services/p_800x800.webp" alt="Illustration">
+                      <img src="img/services/p_800x800.webp" alt="Illustration" loading="lazy">
                     </div>
                   </div>
                 </div>
@@ -533,7 +556,7 @@
                       </a>
                     </div>
                     <div class="mxd-stats-cards__image mxd-stats-cards-image-3">
-                      <img src="img/services/experience_.webp" alt="Illustration">
+                      <img src="img/services/experience_.webp" width="800" height="800" alt="Illustration" loading="lazy">
                     </div>
                   </div>
                 </div>
@@ -551,7 +574,7 @@
                       </a>
                     </div>
                     <div class="mxd-stats-cards__image mxd-stats-cards-image-4">
-                      <img src="img/services/head.webp" alt="Illustration">
+                      <img src="img/services/head.webp" width="800" height="800" alt="Illustration" loading="lazy">
                     </div>
                   </div>
                 </div>
@@ -740,19 +763,18 @@
                     </div>
                     <!-- item -->
                     <div class="mxd-project-item">
-                      <a class="mxd-project-item__media anim-uni-in-up" href="404.html">
+                      <a class="mxd-project-item__media anim-uni-in-up" href="project_admas.html">
                         <div class="mxd-project-item__preview preview-image-4 parallax-img-small"></div>
                         <div class="mxd-project-item__tags">
                           <span class="tag tag-default tag-permanent">Mobile Apps</span>
                           <span class="tag tag-default tag-permanent">Style guides</span>
-                          <span class="tag tag-default tag-permanent">Web Apps</span>
+                          <span class="tag tag-default tag-permanent">Big data</span>
 
                         </div>
                       </a>
                       <div class="mxd-project-item__promo">
                         <div class="mxd-project-item__name">
-                          <a class="anim-uni-in-up" href="404.html"><span>Epic</span> an event
-                            app</a>
+                          <a class="anim-uni-in-up" href="project_admas.html"><span>MoPD</span> mobile intelligence ecosystem</a>
                         </div>
                       </div>
                     </div>
@@ -805,9 +827,9 @@
                     </div>
                     <div class="services-stack__image">
                       <img class="service-img service-img-s" src="img/services/800x800_ser-01.webp"
-                        alt="Service/Feature Image">
+                        alt="Service/Feature Image" width="1000" height="1000" loading="lazy">
                       <img class="service-img service-img-m" src="img/services/1000x1000_ser-01.webp"
-                        alt="Service/Feature Image">
+                        alt="Service/Feature Image" width="1000" height="1000" loading="lazy">
                     </div>
                   </div>
                 </div>
@@ -1296,7 +1318,7 @@
                           <div class="mxd-testimonials-card__content">
                             <div class="mxd-testimonials-card__media anim-uni-in-up">
                               <div class="mxd-testimonials-card__photo">
-                                <img src="img/testimonials/300x300_04.jpg" alt="Author Photo">
+                                <img src="img/testimonials/300x300_04.webp" alt="Author Photo">
                               </div>
                               <!-- <div class="mxd-testimonials-card__company">
                                   <img src="img/brands/envato.svg" alt="Company Logo">
@@ -1536,7 +1558,7 @@
                 </div>
                 <div class="col-12 col-xl-3 mxd-grid-item no-margin">
                   <div class="mxd-section-title__hrcontrols anim-uni-in-up">
-                    <a class="btn btn-anim btn-default btn-outline slide-right-up" href="404.html">
+                    <a class="btn btn-anim btn-default btn-outline slide-right-up" href="coming_soon.html">
                       <span class="btn-caption">All Articles</span>
                       <i class="ph-bold ph-arrow-up-right"></i>
                     </a>
@@ -1555,7 +1577,7 @@
               <div class="row g-0">
                 <!-- item -->
                 <div class="col-12 col-xl-4 mxd-blog-preview__item mxd-grid-item animate-card-3">
-                  <a class="mxd-blog-preview__media" href="404.html">
+                  <a class="mxd-blog-preview__media" href="coming_soon.html">
                     <div class="mxd-blog-preview__image blog-preview-image-1 parallax-img-small">
                       <img class="parallax-img-small" src="img/blog/preview/blog_1.webp" alt="Blog Preview Image">
                     </div>
@@ -1570,12 +1592,12 @@
                     </div>
                   </a>
                   <div class="mxd-blog-preview__data">
-                    <a class="anim-uni-in-up" href="404.html"><span>Product Design</span> and The Trend</a>
+                    <a class="anim-uni-in-up" href="coming_soon.html"><span>Product Design</span> and The Trend</a>
                   </div>
                 </div>
                 <!-- item -->
                 <div class="col-12 col-xl-4 mxd-blog-preview__item mxd-grid-item animate-card-3">
-                  <a class="mxd-blog-preview__media" href="404.html">
+                  <a class="mxd-blog-preview__media" href="coming_soon.html">
                     <div class="mxd-blog-preview__image blog-preview-image-2 parallax-img-small">
                       <img class="parallax-img-small" src="img/blog/preview/blog_2.webp" alt="Blog Preview Image">
                     </div>
@@ -1590,12 +1612,12 @@
                     </div>
                   </a>
                   <div class="mxd-blog-preview__data">
-                    <a class="anim-uni-in-up" href="404.html">Starting Career <span> in Product Design</span></a>
+                    <a class="anim-uni-in-up" href="coming_soon.html">Starting Career <span> in Product Design</span></a>
                   </div>
                 </div>
                 <!-- item -->
                 <div class="col-12 col-xl-4 mxd-blog-preview__item mxd-grid-item animate-card-3">
-                  <a class="mxd-blog-preview__media" href="404.html">
+                  <a class="mxd-blog-preview__media" href="coming_soon.html">
                     <div class="mxd-blog-preview__image blog-preview-image-3 parallax-img-small">
                       <img class="parallax-img-small" src="img/blog/preview/blog_3.webp" alt="Blog Preview Image">
                     </div>
@@ -1610,7 +1632,7 @@
                     </div>
                   </a>
                   <div class="mxd-blog-preview__data">
-                    <a class="anim-uni-in-up" href="404.html"><span> Product Designers </span> and AI</a>
+                    <a class="anim-uni-in-up" href="coming_soon.html"><span> Product Designers </span> and AI</a>
                   </div>
                 </div>
               </div>
@@ -1723,13 +1745,9 @@
                   <span>40</span>
                 </p>
               </li>
+              <!--  -->  
               <li class="footer-nav__item anim-uni-in-up">
-                <a href="services.html" class="footer-nav__link btn-anim">
-                  <span class="btn-caption">Services</span>
-                </a>
-              </li>
-              <li class="footer-nav__item anim-uni-in-up">
-                <a href="404.html" class="footer-nav__link btn-anim">
+                <a href="coming_soon.html" class="footer-nav__link btn-anim">
                   <span class="btn-caption">Insights</span>
                 </a>
               </li>
@@ -1851,9 +1869,9 @@
   <!-- To Top Button End -->
 
   <!-- Load Scripts Start -->
-  <script src="js/libs.min.js"></script>
-  <script src="js/app.js"></script>
-  <script src="js/contact.js"></script>
+  <script src="js/libs.min.js" ></script>
+  <script src="js/app.js" ></script>
+  <script src="js/contact.js" ></script>
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script>
     emailjs.init("CLsGMRIXdJzSCBU8B");
